@@ -59,7 +59,7 @@ public class Hanoi {
         }
         System.out.println("\033[H\033[2J");
         printHanoi();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     public void mover(int n, int origen,  int auxiliar, int destino) throws InterruptedException{

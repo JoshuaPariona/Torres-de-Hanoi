@@ -6,13 +6,14 @@ public class HanoiMain {
     public static void main(String[] args) throws InterruptedException {
 
         Scanner input = new Scanner(System.in);
-        int num, origen, destino ,aux;
+        int num, origen, destino ,aux=3;
 
+        System.out.println("\033[H\033[2J");
         System.out.print("Ingrese el numero de discos: ");
         num = input.nextInt();
-        System.out.print("Ingrese el origen (num estaca inicial)");
+        System.out.print("Ingrese el origen (num estaca inicial): ");
         origen = input.nextInt();
-        System.out.print("Ingrese el destino (num estaca final)");
+        System.out.print("Ingrese el destino (num estaca final): ");
         destino = input.nextInt();
         if(origen==1 & destino==2) aux=3;
         if(origen==1 & destino==3) aux=2;
@@ -29,7 +30,7 @@ public class HanoiMain {
         String temp = input.nextLine();
         temp = input.nextLine();
 
-        h.mover(num,origen,2,destino);
+        h.mover(num,origen,aux,destino);
 
         input.close();
     }
