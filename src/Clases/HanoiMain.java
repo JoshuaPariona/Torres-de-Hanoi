@@ -30,7 +30,7 @@ public class HanoiMain {
         String temp = input.nextLine();
         temp = input.nextLine();
 
-        h.mover(num,origen,aux,destino);
+        h.mover(num, origen, aux, destino);
 
         input.close();
     }
