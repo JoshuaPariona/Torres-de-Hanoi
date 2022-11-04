@@ -111,8 +111,9 @@ public class Hanoi {
             case 3: this.estaca3.add(disc);break;
         }
         System.out.println("\033[H\033[2J");
+        System.out.println("\nSe mueve un disco de " + origen + " a " + destino);
         printHanoi();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
     }
 
     public void printHanoi(){
@@ -125,12 +126,9 @@ public class Hanoi {
 
     public void mover(int n, int origen,  int auxiliar, int destino) throws InterruptedException{
         if(n==1){
-            //System.out.println("mover disco de " + origen + " a " + destino);
             moverDisco(origen,destino);
-
         }else{
             mover(n-1, origen, destino, auxiliar);
-            //System.out.println("mover disco de "+ origen + " a " + destino);
             moverDisco(origen,destino);
             mover(n-1, auxiliar, origen, destino);
         }
